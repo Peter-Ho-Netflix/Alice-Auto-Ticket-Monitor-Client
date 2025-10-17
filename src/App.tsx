@@ -1,24 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button } from '@mui/material';
+import { NavBar } from './views/navBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Button variant="contained">Learn React</Button>
-        </a>
-      </header>
+      <NavBar />
     </div>
   );
 }
