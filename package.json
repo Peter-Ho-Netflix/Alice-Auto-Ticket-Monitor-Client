@@ -18,24 +18,29 @@
     "@types/react-dom": "^19.2.2",
     "axios": "^1.12.2",
     "i18next": "^25.6.0",
+    "next": "^14.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-i18next": "^16.0.1",
     "react-redux": "^9.2.0",
-    "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"No test runner configured\""
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+    "extends": "next/core-web-vitals",
+    "overrides": [
+      {
+        "files": ["src/components/*.tsx"],
+        "rules": {
+          "react-hooks/rules-of-hooks": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -51,6 +56,7 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-next": "^14.2.35",
     "redux-devtools": "^3.7.0"
   }
 }

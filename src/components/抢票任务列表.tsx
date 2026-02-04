@@ -1,4 +1,14 @@
-import { Box, Table, TableBody, TableCell, TablePagination, TableHead, TableRow } from '@mui/material';
+'use client';
+
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TablePagination,
+  TableHead,
+  TableRow,
+} from '@mui/material';
 import { useState } from 'react';
 
 export function 抢票任务列表() {
@@ -30,11 +40,13 @@ export function 抢票任务列表() {
           </TableRow>
         </TableBody>
         <TablePagination
-            count={1}
-            page={page}
-            onPageChange={(event, value) => setPage(value)}
-            rowsPerPage={rowsPerPage}
-            onRowsPerPageChange={(event) => setRowsPerPage(parseInt(event.target.value))}
+          count={1}
+          page={page}
+          onPageChange={(event, value) => setPage(value)}
+          rowsPerPage={rowsPerPage}
+          onRowsPerPageChange={(event) =>
+            setRowsPerPage(parseInt(event.target.value))
+          }
         />
       </Table>
     </Box>

@@ -55,7 +55,8 @@ class WSBase {
     }
 }
 
-export default {
-    AxiosBase,
-    WSBase,
-}
+const api = {
+  AxiosBase,
+  WSBase,
+};
+export default api;
